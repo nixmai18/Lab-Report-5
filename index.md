@@ -7,7 +7,7 @@ User: Nimai
 Hello, I was working on my code and was having some trouble with my ```merge``` method that takes in 2 lists and 
 puts them together in sorted order. However, when I try to test this method using ```bash test.sh``` a wrong output
 is always given through the terminal telling me the test case failure. I was wondering if I could get some help
-fixing this method. Attached are copied of my merge method, test case that is failing, and the terminal output
+fixing this method. Attached are copied of my ```merge``` method, test case that is failing, and the terminal output
 when I try to run this test case. 
 
 ![Image](Lab51.png)
@@ -22,7 +22,7 @@ of your issue. Hope that helps!
 
 User: Nimai 
 
-Thank you for the advice! I just checked my merge method and noticed that the last while loop being used from line 42 to 47 
+Thank you for the advice! I just checked my ```merge``` method and noticed that the last while loop being used from line 42 to 47 
 has a typo with a variable name. I accidently used ```index1``` instead of ```index2``` which ultimately caused an issue with the 
 ```merge``` method. I was able to fix this and my test cases worked as expected. Thank you for the help!
 
@@ -38,11 +38,12 @@ Content of ```ListExamples.java``` before the bug fix:
 
 Command Line to Trigger the Bug:
 ```bash test.sh``` 
+
 ```test.sh``` contains: 
 ![Image](Lab58.png)
 
 Description of edit needed to fix bug:
-One line 44 of the ```ListExamples.java``` file the variable ```index1``` needed to be renamed to ```index2``` as
+On line 44 of the ```ListExamples.java``` file the variable ```index1``` needed to be renamed to ```index2``` as
 the while loop was made to update the contents of ```index2```. This was causing the error when testing the ```merge``` method
 through the terminal as an infinite loop was being produced. 
 
